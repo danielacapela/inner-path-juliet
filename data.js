@@ -1,10 +1,10 @@
 /*
-  inner.path™ v0.17
+  inner.path™ v0.19
   Private pilot · Juliet only.
 */
 
-const DEMO_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/3Y9dQJ8Y0ScYrPWWZCtoSS?utm_source=generator";
-const INNER_CHILD_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/7JLYDy0WI8w9hJ4yvLQgy1?utm_source=generator";
+const DEMO_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/40i9x565h8I6BpD4RHAW0Y?utm_source=generator";
+const INNER_CHILD_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/4aXeZaKBl83aslKchI08lS?utm_source=generator";
 const BODY_SCAN_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/7boPwd0Eyy4A9Wp2Vk0CUh?utm_source=generator";
 
 const UI_TEXT = {
@@ -491,43 +491,350 @@ const JULIET_SESSIONS = [
   {
     ...REENCONTRO_SESSION,
     id: "juliet-reconnect-00",
-    status: "current",
+    navCode: { pt: "REENCONTRO", en: "RECONNECT" },
+    timelineCode: "R0",
+    status: "done",
     note: {
-      pt: "Esta semana é para organizar o que já mudou, o que ainda pede cuidado e qual é a próxima porta do teu processo.",
-      en: "This week is here to organise what has already changed, what still needs care, and what the next door of your process may be."
+      pt: "Este foi o teu espaço para parar, olhar de novo para o teu mapa interno e perceber o que pede cuidado nesta nova fase. Não estás a começar de novo. Estás a continuar a partir de onde estás.",
+      en: "This was your space to pause, look at your inner map again, and notice what needs support in this new phase. You are not starting again. You are continuing from where you are."
+    },
+    tasks: {
+      pt: [
+        { title: "Completar o Casulo", detail: "olhar para o ponto em que estás agora", type: "casulo" },
+        { title: "Rever o GPS interno", detail: "os valores que te ajudam a voltar a ti", type: "valores" },
+        { title: "Ouvir Banho de Luz", detail: "prática de reencontro e regulação", type: "meditação" },
+        { title: "Escrever o que está vivo agora", detail: "sem ter de organizar tudo", type: "diário" }
+      ],
+      en: [
+        { title: "Complete the Cocoon", detail: "look at where you are now", type: "cocoon" },
+        { title: "Review your Inner GPS", detail: "the values that help you return to yourself", type: "values" },
+        { title: "Listen to Light Bath", detail: "reconnect and regulation practice", type: "meditation" },
+        { title: "Write what feels alive now", detail: "without needing to organise everything", type: "journal" }
+      ]
     },
     journal: {
       pt: [
-        "O que mudou em mim desde que comecei este processo?",
-        "O que ainda pede mais cuidado, verdade ou estrutura?",
-        "Que parte de mim precisa de sentir que tem lugar?"
+        "O que sinto diferente em mim agora?",
+        "Que área da minha vida pede mais cuidado?",
+        "O que quero compreender melhor sobre mim nesta nova fase?"
       ],
       en: [
-        "What has changed in me since I began this process?",
-        "What still needs more care, truth or structure?",
-        "Which part of me needs to feel that it belongs?"
+        "What feels different in me now?",
+        "Which area of my life needs more care?",
+        "What do I want to understand about myself in this new phase?"
       ]
     },
     extra: {
       ...REENCONTRO_SESSION.extra,
       worked: {
-        pt: ["regulação emocional", "identidade e pertença", "auto-valor", "padrões familiares", "voz interior"],
-        en: ["emotional regulation", "identity and belonging", "self-worth", "family patterns", "inner voice"]
+        pt: ["regulação emocional", "identidade", "auto-valor", "padrões internos", "voz interior"],
+        en: ["emotional regulation", "identity", "self-worth", "inner patterns", "inner voice"]
       },
       activeNow: {
-        pt: ["actualizar o mapa interno", "fortalecer pertença", "escolher a próxima porta terapêutica"],
-        en: ["update the inner map", "strengthen belonging", "choose the next therapeutic door"]
+        pt: ["actualizar o mapa interno", "fortalecer o lugar interno", "escolher a próxima porta"],
+        en: ["update the inner map", "strengthen the inner place", "choose the next door"]
       },
       nextDoor: {
-        pt: "A próxima porta será escolhida pela Daniela conforme o que surgir no reencontro: integração, regulação, criança interior, crenças, ROSE ou uma semana emergente.",
-        en: "The next door will be chosen by Daniela according to what emerges in the reconnect session: integration, regulation, inner child, beliefs, ROSE or an emergent week."
+        pt: "A próxima fase começa com mais espaço interno, mais gentileza e ferramentas simples para voltares a ti quando precisares.",
+        en: "The next phase begins with more inner space, more kindness and simple tools to return to yourself when you need them."
       }
     }
   },
+
   {
-    ...CONTINUITY_INTEGRATION,
-    id: "juliet-follow-01",
-    status: "locked"
+    id: "juliet-s-01",
+    baseNumber: null,
+    navCode: { pt: "S · 01", en: "S · 01" },
+    timelineCode: "S1",
+    phase: "integration",
+    status: "current",
+    title: { pt: "Abrir Espaço", en: "Making Space" },
+    subtitle: { pt: "o que é meu / o que já posso largar", en: "what is mine / what I can release" },
+    intent: { pt: "criar mais espaço interno e suavizar peso antigo", en: "creating more inner space and softening old pressure" },
+    dateLabel: { pt: "sessão 1 depois do reencontro", en: "session 1 after reconnect" },
+    sessionMemory: {
+      pt: ["âncora de segurança", "trabalho de libertação interna", "mais espaço no corpo", "regresso ao que parece verdadeiro para ti"],
+      en: ["safety anchor", "inner release work", "more space in the body", "returning to what feels true for you"]
+    },
+    note: {
+      pt: "Esta semana é para abrir espaço por dentro. Às vezes carregamos pressão ou sentimentos antigos durante tanto tempo que começam a parecer normais. Esta sessão ajuda o teu sistema a reconhecer o que pesa, o que já vem de trás e o que está pronto para suavizar. Observa apenas o que fica mais leve, mais claro ou um pouco mais espaçoso.",
+      en: "This week is about making space inside. Sometimes we carry pressure or old feelings for so long that they start to feel normal. This session helps your system recognise what feels heavy, what feels old, and what is ready to soften. Simply notice what feels lighter, clearer, or a little more spacious."
+    },
+    tasks: {
+      pt: [
+        { title: "Respiração 5-5", detail: "2 minutos · manhã ou noite", type: "respiração" },
+        { title: "Ouvir Light Bath", detail: "apoio opcional para regular", type: "meditação" },
+        { title: "Diário · o que ficou mais leve", detail: "3 linhas chegam", type: "diário" },
+        { title: "Meu / Já posso largar", detail: "separar o que te pertence do que pesa", type: "integração" }
+      ],
+      en: [
+        { title: "5-5 breathing", detail: "2 minutes · morning or evening", type: "breath" },
+        { title: "Listen to Light Bath", detail: "optional support to regulate", type: "meditation" },
+        { title: "Journal · what feels lighter", detail: "3 lines are enough", type: "journal" },
+        { title: "Mine / I can release", detail: "separate what belongs to you from what feels heavy", type: "integration" }
+      ]
+    },
+    audio: {
+      title: { pt: "Banho de Luz", en: "Light Bath" },
+      detail: { pt: "apoio de regulação · Spotify", en: "regulation support · Spotify" },
+      embedUrl: DEMO_SPOTIFY_EMBED
+    },
+    sensations: {
+      pt: [
+        { title: "mais espaço por dentro", detail: "como se algo tivesse mais ar" },
+        { title: "cansaço tranquilo", detail: "o corpo pode pedir integração" },
+        { title: "pequenos alívios", detail: "momentos simples em que te sentes mais tu" },
+        { title: "mais distância de pressão antiga", detail: "menos fusão com o que antes pesava" }
+      ],
+      en: [
+        { title: "more space inside", detail: "as if something has more air" },
+        { title: "quiet tiredness", detail: "the body may ask for integration" },
+        { title: "small relief", detail: "simple moments where you feel more like yourself" },
+        { title: "more distance from old pressure", detail: "less fusion with what used to feel heavy" }
+      ]
+    },
+    journal: {
+      pt: [
+        "O que senti mais pesado esta semana?",
+        "O que ficou um pouco mais leve?",
+        "O que me ajudou a voltar a mim?",
+        "O que quero manter perto de mim?"
+      ],
+      en: [
+        "What felt heavy this week?",
+        "What felt a little lighter?",
+        "What helped me come back to myself?",
+        "What do I want to keep close to me?"
+      ]
+    },
+    extra: {
+      type: "breath",
+      title: { pt: "Respiração 5-5", en: "5-5 Breathing" },
+      body: {
+        pt: "Inspira durante 5 segundos. Expira durante 5 segundos. Repete durante 2 minutos. Depois escreve uma frase: o que é meu e o que já posso largar?",
+        en: "Inhale for 5 seconds. Exhale for 5 seconds. Repeat for 2 minutes. Then write one sentence: what is mine, and what can I release?"
+      }
+    }
+  },
+
+  {
+    id: "juliet-s-02",
+    baseNumber: null,
+    navCode: { pt: "S · 02", en: "S · 02" },
+    timelineCode: "S2",
+    phase: "integration",
+    status: "locked",
+    title: { pt: "Ficar do Meu Lado", en: "Being On My Side" },
+    subtitle: { pt: "gentileza interna", en: "kindness inside" },
+    intent: { pt: "construir uma relação mais segura e gentil contigo", en: "building a safer and kinder relationship with yourself" },
+    dateLabel: { pt: "sessão 2 depois do reencontro", en: "session 2 after reconnect" },
+    sessionMemory: {
+      pt: ["auto-compaixão", "parte mais nova", "gentileza interna", "futuro com mais segurança"],
+      en: ["self-compassion", "younger part", "inner kindness", "a safer future"]
+    },
+    note: {
+      pt: "Esta semana é para aprenderes a ficar do teu lado. Não de forma perfeita. De forma real. Há partes de ti que se esforçaram, se adaptaram ou se protegeram como conseguiram. Agora podes começar a escutá-las com mais gentileza. Podes cuidar sem resolver tudo de uma vez.",
+      en: "This week is about learning to be on your own side. Not in a perfect way. In a real way. There are parts of you that tried hard, adapted or protected themselves the best way they could. Now you can begin to listen to them with more kindness. You can care without solving everything at once."
+    },
+    tasks: {
+      pt: [
+        { title: "Ouvir Inner Child", detail: "uma vez durante a semana", type: "meditação" },
+        { title: "Carta a uma parte mais nova", detail: "curta, simples e gentil", type: "carta" },
+        { title: "Respiração 5-5", detail: "antes de dormir", type: "respiração" },
+        { title: "Escolher uma frase gentil", detail: "para repetir durante a semana", type: "integração" }
+      ],
+      en: [
+        { title: "Listen to Inner Child", detail: "once during the week", type: "meditation" },
+        { title: "Letter to a younger part", detail: "short, simple and kind", type: "letter" },
+        { title: "5-5 breathing", detail: "before sleep", type: "breath" },
+        { title: "Choose one kind sentence", detail: "to repeat during the week", type: "integration" }
+      ]
+    },
+    audio: {
+      title: { pt: "Criança Interior", en: "Inner Child" },
+      detail: { pt: "meditação guiada · Spotify", en: "guided meditation · Spotify" },
+      embedUrl: INNER_CHILD_SPOTIFY_EMBED
+    },
+    sensations: {
+      pt: [
+        { title: "mais ternura", detail: "quando te aproximas de ti com menos julgamento" },
+        { title: "emoção suave", detail: "o corpo pode soltar devagar" },
+        { title: "vontade de silêncio", detail: "às vezes integrar pede calma" },
+        { title: "mais proximidade contigo", detail: "como se uma parte tua respirasse melhor" }
+      ],
+      en: [
+        { title: "more tenderness", detail: "when you come closer to yourself with less judgement" },
+        { title: "soft emotion", detail: "the body may release slowly" },
+        { title: "a wish for quiet", detail: "sometimes integration asks for calm" },
+        { title: "feeling closer to yourself", detail: "as if one part of you can breathe better" }
+      ]
+    },
+    journal: {
+      pt: [
+        "Que parte de mim precisou de gentileza esta semana?",
+        "O que diria a uma versão mais nova de mim?",
+        "Que frase me ajudou a sentir mais segurança?",
+        "Que apoio quero dar-me agora?"
+      ],
+      en: [
+        "What part of me needed kindness this week?",
+        "What would I say to a younger version of me?",
+        "What sentence helped me feel safer?",
+        "What kind of support do I want to give myself now?"
+      ]
+    },
+    extra: {
+      type: "innerchild",
+      title: { pt: "A Parte Mais Nova", en: "The Younger Part" },
+      body: {
+        pt: "Escolhe uma necessidade e uma frase de resposta. Faz isto com calma, como se estivesses a falar com alguém que merece ser vista, escutada e protegida.",
+        en: "Choose one need and one response sentence. Do this slowly, as if you were speaking to someone who deserves to be seen, heard and protected."
+      }
+    }
+  },
+
+  {
+    id: "juliet-s-03",
+    baseNumber: null,
+    navCode: { pt: "S · 03", en: "S · 03" },
+    timelineCode: "S3",
+    phase: "deep",
+    status: "locked",
+    title: { pt: "O Meu Ritmo", en: "My Own Rhythm" },
+    subtitle: { pt: "evidência de confiança", en: "confidence evidence" },
+    intent: { pt: "construir confiança através de pequenas evidências reais", en: "building confidence through small real evidence" },
+    dateLabel: { pt: "sessão 3 depois do reencontro", en: "session 3 after reconnect" },
+    sessionMemory: {
+      pt: ["perceber quando o exterior fica demasiado alto", "voltar ao corpo", "recolher provas de capacidade", "aprender no teu próprio ritmo"],
+      en: ["noticing when the outside gets too loud", "coming back to the body", "collecting proof of capability", "learning in your own rhythm"]
+    },
+    note: {
+      pt: "A confiança cresce com evidência. Não precisa de ser uma evidência enorme. Pode ser o momento em que tentaste outra vez, pediste ajuda, percebeste algo mais tarde, respiraste antes de reagir ou escolheste um pensamento mais gentil. O teu ritmo também conta.",
+      en: "Confidence grows through evidence. It does not need to be huge evidence. It can be the moment you tried again, asked for help, understood something later, breathed before reacting, or chose a kinder thought. Your rhythm counts too."
+    },
+    tasks: {
+      pt: [
+        { title: "Diário de evidência", detail: "uma pequena prova por dia", type: "diário" },
+        { title: "Respiração 5-5", detail: "antes de estudar ou de um momento exigente", type: "respiração" },
+        { title: "Pausa de 90 segundos", detail: "quando o exterior fica demasiado alto", type: "prática" },
+        { title: "Frase da semana", detail: "o meu ritmo também conta", type: "integração" }
+      ],
+      en: [
+        { title: "Evidence log", detail: "one small proof per day", type: "journal" },
+        { title: "5-5 breathing", detail: "before studying or a demanding moment", type: "breath" },
+        { title: "90-second pause", detail: "when the outside gets too loud", type: "practice" },
+        { title: "Sentence of the week", detail: "my rhythm counts too", type: "integration" }
+      ]
+    },
+    audio: null,
+    sensations: {
+      pt: [
+        { title: "notar mais cedo", detail: "percebes quando começas a sair de ti" },
+        { title: "mais consciência do corpo", detail: "o corpo avisa antes da mente organizar" },
+        { title: "pequenas vitórias", detail: "momentos simples começam a contar" },
+        { title: "menos pressa", detail: "não tens de ter tudo resolvido para avançar" }
+      ],
+      en: [
+        { title: "noticing sooner", detail: "you notice when you start moving away from yourself" },
+        { title: "more body awareness", detail: "the body signals before the mind organises" },
+        { title: "small wins", detail: "simple moments begin to count" },
+        { title: "less rush", detail: "you do not need everything solved to move forward" }
+      ]
+    },
+    journal: {
+      pt: [
+        "Quando senti o exterior demasiado alto esta semana?",
+        "O que aconteceu no meu corpo?",
+        "O que me ajudou a voltar?",
+        "Que pequena prova tenho de que estou a aprender, a crescer ou a tentar?"
+      ],
+      en: [
+        "When did the outside feel too loud this week?",
+        "What happened in my body?",
+        "What helped me come back?",
+        "What is one small piece of evidence that I am learning, growing or trying?"
+      ]
+    },
+    extra: {
+      type: "default",
+      title: { pt: "Diário de Evidência", en: "Evidence Log" },
+      body: {
+        pt: "Todos os dias, escreve uma pequena prova: tentei outra vez, pedi ajuda, percebi algo mais tarde, fiz uma pausa, respirei, escolhi um pensamento mais gentil ou avancei mesmo com dúvidas.",
+        en: "Every day, write one small proof: I tried again, asked for help, understood something later, paused, breathed, chose a kinder thought or moved forward even with doubts."
+      }
+    }
+  },
+
+  {
+    id: "juliet-s-04",
+    baseNumber: null,
+    navCode: { pt: "S · 04", en: "S · 04" },
+    timelineCode: "S4",
+    phase: "integration",
+    status: "locked",
+    title: { pt: "Mapa de Confiança", en: "Confidence Map" },
+    subtitle: { pt: "ferramentas para continuar", en: "tools for the next phase" },
+    intent: { pt: "transformar o que aprendeste em ferramentas simples", en: "turning what you learned into simple tools" },
+    dateLabel: { pt: "sessão 4 depois do reencontro", en: "session 4 after reconnect" },
+    sessionMemory: {
+      pt: ["o que mudou", "o que ajuda", "tapping", "mapa de apoio para 30 dias"],
+      en: ["what changed", "what helps", "tapping", "30-day support map"]
+    },
+    note: {
+      pt: "Esta semana é para saíres com ferramentas. Para os dias claros e para os dias confusos. Para os momentos em que precisas de respirar, parar, escolher e voltar a ti. A confiança não precisa de ser barulhenta. A confiança calma também conta.",
+      en: "This week is about leaving with tools. For the clear days and for the messy days. For the moments when you need to breathe, pause, choose and come back to yourself. Confidence does not need to be loud. Quiet confidence counts too."
+    },
+    tasks: {
+      pt: [
+        { title: "Tapping", detail: "sequência simples para voltar a ti", type: "tapping" },
+        { title: "Respiração 5-5", detail: "âncora diária", type: "respiração" },
+        { title: "Mapa de apoio · 30 dias", detail: "uma ferramenta para cada momento", type: "plano" },
+        { title: "Diário · o que me ajuda", detail: "rever o que funcionou", type: "diário" }
+      ],
+      en: [
+        { title: "Tapping", detail: "simple sequence to come back to yourself", type: "tapping" },
+        { title: "5-5 breathing", detail: "daily anchor", type: "breath" },
+        { title: "Support map · 30 days", detail: "one tool for each moment", type: "plan" },
+        { title: "Journal · what helps me", detail: "review what worked", type: "journal" }
+      ]
+    },
+    audio: null,
+    sensations: {
+      pt: [
+        { title: "mais agência", detail: "tens algo concreto para usar" },
+        { title: "mais clareza", detail: "percebes melhor o que te ajuda" },
+        { title: "orgulho calmo", detail: "reconhecer o caminho sem exagerar" },
+        { title: "mais direcção interna", detail: "um próximo passo simples começa a aparecer" }
+      ],
+      en: [
+        { title: "more agency", detail: "you have something concrete to use" },
+        { title: "more clarity", detail: "you understand better what supports you" },
+        { title: "quiet pride", detail: "recognising the path without exaggerating it" },
+        { title: "more inner direction", detail: "a simple next step begins to appear" }
+      ]
+    },
+    journal: {
+      pt: [
+        "O que mudou em mim desde o Ponto de Reencontro?",
+        "O que me ajuda a voltar a mim?",
+        "Que ferramenta foi mais fácil de usar?",
+        "O que quero praticar nos próximos 30 dias?"
+      ],
+      en: [
+        "What has changed in me since the Reconnect Point?",
+        "What helps me come back to myself?",
+        "Which tool felt easiest to use?",
+        "What do I want to practise for the next 30 days?"
+      ]
+    },
+    extra: {
+      type: "tapping",
+      title: { pt: "Sequência de Tapping", en: "Tapping Sequence" },
+      body: {
+        pt: "Começa por avaliar a intensidade de 0 a 10. Usa uma frase simples: apesar de isto estar activo agora, eu escolho ficar do meu lado. Faz uma ronda devagar e volta a avaliar.",
+        en: "Start by rating the intensity from 0 to 10. Use a simple phrase: even though this is active right now, I choose to stay on my side. Move through one round slowly and rate again."
+      }
+    }
   }
 ];
 
@@ -544,7 +851,7 @@ const CLIENTS = [
       pt: ["Segurança", "Pertença", "Auto-respeito"],
       en: ["Safety", "Belonging", "Self-Respect"]
     },
-    activeSessionId: "juliet-reconnect-00",
+    activeSessionId: "juliet-s-01",
     sessions: JULIET_SESSIONS
   }
 ];
@@ -556,7 +863,7 @@ const INNER_PATH_DATA = {
     subtitle: { pt: "o teu espaço entre sessões", en: "your space between sessions" }
   },
   app: {
-    version: "v0.17",
+    version: "v0.19",
     defaultLanguage: "en",
     defaultClientId: "juliet-continuity-pilot",
     previewLockedSessions: false
