@@ -1,6 +1,6 @@
 /*
-  inner.path™ v0.19
-  Private pilot · Juliet only.
+  inner.path™ v0.20
+  Juliet continuity · Reconnect current.
 */
 
 const DEMO_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/40i9x565h8I6BpD4RHAW0Y?utm_source=generator";
@@ -9,7 +9,7 @@ const BODY_SCAN_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/7boPwd0E
 
 const UI_TEXT = {
   pt: {
-    demo: "piloto privado · espaço pessoal da Juliet",
+    demo: "espaço pessoal da Juliet",
     hello: "olá,",
     values: "GPS interno · os teus 3 espelhos ·",
     note: "nota · daniela",
@@ -43,12 +43,12 @@ const UI_TEXT = {
     futureSession: "sessão futura",
     futureBody: "Esta sessão ainda não está aberta para a cliente. A Daniela pode desbloqueá-la quando fizer sentido no percurso.",
     photoOptional: "foto opcional do casulo físico",
-    photoFuture: "Na versão real, esta fotografia deve ficar protegida numa base de dados privada.",
+    photoFuture: "Esta fotografia fica guardada apenas neste dispositivo.",
     scoreFrom1To10: "pontua cada área de 1 a 10",
     casuloMeaning: "O Casulo mostra o ponto em que estás neste momento da tua vida: como te estás a nutrir, onde existe mais presença e que áreas estão prontas para receber mais cuidado, estrutura e escolha."
   },
   en: {
-    demo: "private pilot · Juliet personal space",
+    demo: "Juliet personal space",
     hello: "hello,",
     values: "inner GPS · your 3 mirrors ·",
     note: "note · daniela",
@@ -82,7 +82,7 @@ const UI_TEXT = {
     futureSession: "future session",
     futureBody: "This session is not yet open for the client. Daniela can unlock it when it makes sense in the process.",
     photoOptional: "optional photo of the physical cocoon",
-    photoFuture: "In the real version, this photo should be protected in a private database.",
+    photoFuture: "This photo stays saved only on this device.",
     scoreFrom1To10: "score each area from 1 to 10",
     casuloMeaning: "The Cocoon shows where you are in this moment of your life: how you are nourishing yourself, where there is more presence and which areas are ready to receive more care, structure and choice."
   }
@@ -401,7 +401,7 @@ const REENCONTRO_SESSION = {
   },
   note: {
     pt: "Esta semana é para organizar o que já mudou, o que ainda pede cuidado e qual é a próxima porta do teu processo.",
-    en: "This week is here to organise what has already changed, what still needs care and what the next door of your process may be."
+    en: "This week is here to organise what has already changed, what still needs care, and what the next door of your process may be."
   },
   tasks: {
     pt: [
@@ -493,23 +493,23 @@ const JULIET_SESSIONS = [
     id: "juliet-reconnect-00",
     navCode: { pt: "REENCONTRO", en: "RECONNECT" },
     timelineCode: "R0",
-    status: "done",
+    status: "current",
     note: {
-      pt: "Este foi o teu espaço para parar, olhar de novo para o teu mapa interno e perceber o que pede cuidado nesta nova fase. Não estás a começar de novo. Estás a continuar a partir de onde estás.",
-      en: "This was your space to pause, look at your inner map again, and notice what needs support in this new phase. You are not starting again. You are continuing from where you are."
+      pt: "Esta semana é para organizar o que já mudou, o que ainda pede cuidado e qual é a próxima porta do teu processo.",
+      en: "This week is here to organise what has already changed, what still needs care, and what the next door of your process may be."
     },
     tasks: {
       pt: [
         { title: "Completar o Casulo", detail: "olhar para o ponto em que estás agora", type: "casulo" },
         { title: "Rever o GPS interno", detail: "os valores que te ajudam a voltar a ti", type: "valores" },
         { title: "Ouvir Banho de Luz", detail: "prática de reencontro e regulação", type: "meditação" },
-        { title: "Escrever o que está vivo agora", detail: "sem ter de organizar tudo", type: "diário" }
+        { title: "Escrever o que está vivo agora", detail: "uma página leve, ao teu ritmo", type: "diário" }
       ],
       en: [
         { title: "Complete the Cocoon", detail: "look at where you are now", type: "cocoon" },
         { title: "Review your Inner GPS", detail: "the values that help you return to yourself", type: "values" },
         { title: "Listen to Light Bath", detail: "reconnect and regulation practice", type: "meditation" },
-        { title: "Write what feels alive now", detail: "without needing to organise everything", type: "journal" }
+        { title: "Write what feels alive now", detail: "one light page, in your own rhythm", type: "journal" }
       ]
     },
     journal: {
@@ -547,7 +547,7 @@ const JULIET_SESSIONS = [
     navCode: { pt: "S · 01", en: "S · 01" },
     timelineCode: "S1",
     phase: "integration",
-    status: "current",
+    status: "locked",
     title: { pt: "Abrir Espaço", en: "Making Space" },
     subtitle: { pt: "o que é meu / o que já posso largar", en: "what is mine / what I can release" },
     intent: { pt: "criar mais espaço interno e suavizar peso antigo", en: "creating more inner space and softening old pressure" },
@@ -557,8 +557,8 @@ const JULIET_SESSIONS = [
       en: ["safety anchor", "inner release work", "more space in the body", "returning to what feels true for you"]
     },
     note: {
-      pt: "Esta semana é para abrir espaço por dentro. Às vezes carregamos pressão ou sentimentos antigos durante tanto tempo que começam a parecer normais. Esta sessão ajuda o teu sistema a reconhecer o que pesa, o que já vem de trás e o que está pronto para suavizar. Observa apenas o que fica mais leve, mais claro ou um pouco mais espaçoso.",
-      en: "This week is about making space inside. Sometimes we carry pressure or old feelings for so long that they start to feel normal. This session helps your system recognise what feels heavy, what feels old, and what is ready to soften. Simply notice what feels lighter, clearer, or a little more spacious."
+      pt: "Esta semana é para abrir espaço por dentro. O teu sistema pode começar a reconhecer o que pesa, o que já vem de trás e o que está pronto para suavizar. Observa o que fica mais leve, mais claro ou um pouco mais espaçoso.",
+      en: "This week is about making space inside. Your system can begin to recognise what feels heavy, what feels old, and what is ready to soften. Notice what feels lighter, clearer, or a little more spacious."
     },
     tasks: {
       pt: [
@@ -633,8 +633,8 @@ const JULIET_SESSIONS = [
       en: ["self-compassion", "younger part", "inner kindness", "a safer future"]
     },
     note: {
-      pt: "Esta semana é para aprenderes a ficar do teu lado. Não de forma perfeita. De forma real. Há partes de ti que se esforçaram, se adaptaram ou se protegeram como conseguiram. Agora podes começar a escutá-las com mais gentileza. Podes cuidar sem resolver tudo de uma vez.",
-      en: "This week is about learning to be on your own side. Not in a perfect way. In a real way. There are parts of you that tried hard, adapted or protected themselves the best way they could. Now you can begin to listen to them with more kindness. You can care without solving everything at once."
+      pt: "Esta semana é para aprenderes a ficar do teu lado. De forma real. Há partes de ti que se esforçaram, se adaptaram ou se protegeram como conseguiram. Agora podes começar a escutá-las com mais gentileza. Podes cuidar um passo de cada vez.",
+      en: "This week is about learning to be on your own side. In a real way. There are parts of you that tried hard, adapted or protected themselves the best way they could. Now you can begin to listen to them with more kindness. You can care one step at a time."
     },
     tasks: {
       pt: [
@@ -705,24 +705,24 @@ const JULIET_SESSIONS = [
     intent: { pt: "construir confiança através de pequenas evidências reais", en: "building confidence through small real evidence" },
     dateLabel: { pt: "sessão 3 depois do reencontro", en: "session 3 after reconnect" },
     sessionMemory: {
-      pt: ["perceber quando o exterior fica demasiado alto", "voltar ao corpo", "recolher provas de capacidade", "aprender no teu próprio ritmo"],
-      en: ["noticing when the outside gets too loud", "coming back to the body", "collecting proof of capability", "learning in your own rhythm"]
+      pt: ["perceber quando tudo parece demasiado alto", "voltar ao corpo", "recolher provas de capacidade", "aprender no teu próprio ritmo"],
+      en: ["noticing when things feel too loud", "coming back to the body", "collecting proof of capability", "learning in your own rhythm"]
     },
     note: {
-      pt: "A confiança cresce com evidência. Não precisa de ser uma evidência enorme. Pode ser o momento em que tentaste outra vez, pediste ajuda, percebeste algo mais tarde, respiraste antes de reagir ou escolheste um pensamento mais gentil. O teu ritmo também conta.",
-      en: "Confidence grows through evidence. It does not need to be huge evidence. It can be the moment you tried again, asked for help, understood something later, breathed before reacting, or chose a kinder thought. Your rhythm counts too."
+      pt: "A confiança cresce com evidência. As pequenas provas também contam: o momento em que tentas outra vez, pedes ajuda, percebes algo mais tarde, respiras antes de reagir ou escolhes um pensamento mais gentil. O teu ritmo também conta.",
+      en: "Confidence grows through evidence. Small evidence counts: the moment you try again, ask for help, understand something later, breathe before reacting, or choose a kinder thought. Your rhythm counts too."
     },
     tasks: {
       pt: [
         { title: "Diário de evidência", detail: "uma pequena prova por dia", type: "diário" },
         { title: "Respiração 5-5", detail: "antes de estudar ou de um momento exigente", type: "respiração" },
-        { title: "Pausa de 90 segundos", detail: "quando o exterior fica demasiado alto", type: "prática" },
+        { title: "Pausa de 90 segundos", detail: "quando tudo parece demasiado alto", type: "prática" },
         { title: "Frase da semana", detail: "o meu ritmo também conta", type: "integração" }
       ],
       en: [
         { title: "Evidence log", detail: "one small proof per day", type: "journal" },
         { title: "5-5 breathing", detail: "before studying or a demanding moment", type: "breath" },
-        { title: "90-second pause", detail: "when the outside gets too loud", type: "practice" },
+        { title: "90-second pause", detail: "when things feel too loud", type: "practice" },
         { title: "Sentence of the week", detail: "my rhythm counts too", type: "integration" }
       ]
     },
@@ -732,24 +732,24 @@ const JULIET_SESSIONS = [
         { title: "notar mais cedo", detail: "percebes quando começas a sair de ti" },
         { title: "mais consciência do corpo", detail: "o corpo avisa antes da mente organizar" },
         { title: "pequenas vitórias", detail: "momentos simples começam a contar" },
-        { title: "menos pressa", detail: "não tens de ter tudo resolvido para avançar" }
+        { title: "menos pressa", detail: "podes avançar um passo de cada vez" }
       ],
       en: [
         { title: "noticing sooner", detail: "you notice when you start moving away from yourself" },
         { title: "more body awareness", detail: "the body signals before the mind organises" },
         { title: "small wins", detail: "simple moments begin to count" },
-        { title: "less rush", detail: "you do not need everything solved to move forward" }
+        { title: "less rush", detail: "you can move forward one step at a time" }
       ]
     },
     journal: {
       pt: [
-        "Quando senti o exterior demasiado alto esta semana?",
+        "Quando senti que tudo ficou demasiado alto esta semana?",
         "O que aconteceu no meu corpo?",
         "O que me ajudou a voltar?",
         "Que pequena prova tenho de que estou a aprender, a crescer ou a tentar?"
       ],
       en: [
-        "When did the outside feel too loud this week?",
+        "When did things feel too loud this week?",
         "What happened in my body?",
         "What helped me come back?",
         "What is one small piece of evidence that I am learning, growing or trying?"
@@ -781,8 +781,8 @@ const JULIET_SESSIONS = [
       en: ["what changed", "what helps", "tapping", "30-day support map"]
     },
     note: {
-      pt: "Esta semana é para saíres com ferramentas. Para os dias claros e para os dias confusos. Para os momentos em que precisas de respirar, parar, escolher e voltar a ti. A confiança não precisa de ser barulhenta. A confiança calma também conta.",
-      en: "This week is about leaving with tools. For the clear days and for the messy days. For the moments when you need to breathe, pause, choose and come back to yourself. Confidence does not need to be loud. Quiet confidence counts too."
+      pt: "Esta semana é para saíres com ferramentas. Para os dias claros e para os dias confusos. Para os momentos em que precisas de respirar, parar, escolher e voltar a ti. A confiança calma também conta.",
+      en: "This week is about leaving with tools. For the clear days and for the messy days. For the moments when you need to breathe, pause, choose and come back to yourself. Quiet confidence counts too."
     },
     tasks: {
       pt: [
@@ -851,7 +851,7 @@ const CLIENTS = [
       pt: ["Segurança", "Pertença", "Auto-respeito"],
       en: ["Safety", "Belonging", "Self-Respect"]
     },
-    activeSessionId: "juliet-s-01",
+    activeSessionId: "juliet-reconnect-00",
     sessions: JULIET_SESSIONS
   }
 ];
@@ -863,7 +863,7 @@ const INNER_PATH_DATA = {
     subtitle: { pt: "o teu espaço entre sessões", en: "your space between sessions" }
   },
   app: {
-    version: "v0.19",
+    version: "v0.20",
     defaultLanguage: "en",
     defaultClientId: "juliet-continuity-pilot",
     previewLockedSessions: false

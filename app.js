@@ -147,7 +147,6 @@ function renderApp() {
     ${renderTopBar()}
     ${renderHeader(session)}
     ${renderValues()}
-    ${renderNotice()}
     ${renderMessage(session)}
     ${renderTabContent(session)}
     ${renderBottomNav(session)}
@@ -231,12 +230,7 @@ function renderValues() {
 }
 
 function renderNotice() {
-  return `
-    <div class="notice demo-note">
-      <div class="notice-line">${ui("demo")} · ${INNER_PATH_DATA.app.version}</div>
-      <div class="client-link-line">${state.language === "pt" ? "guarda este link só para ti" : "keep this link just for you"}</div>
-    </div>
-  `;
+  return ``;
 }
 
 function renderMessage(session) {
@@ -573,7 +567,7 @@ function renderInnerChildExtra(session) {
             <span id="inner-photo-label-${session.id}">${state.language === "pt" ? "adicionar foto" : "add photo"}</span>
             <img id="inner-photo-preview-${session.id}" alt="" />
           </label>
-          <small>${state.language === "pt" ? "demo local · na versão real, a foto deve ficar protegida" : "local demo · in the real version, the photo must be protected"}</small>
+          <small>${state.language === "pt" ? "foto local · guardada apenas neste dispositivo" : "local photo · saved only on this device"}</small>
         </div>
         <div class="sub-block">
           <h3>${state.language === "pt" ? "1 · O que esta parte precisava" : "1 · What this part needed"}</h3>
@@ -595,7 +589,7 @@ function renderInnerChildExtra(session) {
 function renderContinuityExtra(session) {
   const misalignment = state.language === "pt"
     ? ["agrado demais", "calo o que sinto", "entro em culpa", "volto à comparação", "isolo-me", "deixo de dormir bem", "perco contacto com o corpo", "fico reactiva"]
-    : ["I over-please", "I silence what I feel", "I go into guilt", "I return to comparison", "I isolate", "I stop sleeping well", "I lose contact with my body", "I become reactive"];
+    : ["I over-please", "I silence what I feel", "I go into guilt", "I return to old patterns", "I isolate", "I stop sleeping well", "I lose contact with my body", "I become reactive"];
   const regulateOptions = state.language === "pt"
     ? ["coerência cardíaca 5-5", "tapping", "meditação", "mão no peito e ventre", "caminhada consciente"]
     : ["heart coherence 5-5", "tapping", "meditation", "hand on chest and belly", "conscious walk"];

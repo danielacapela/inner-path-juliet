@@ -1,12 +1,8 @@
-# inner.path™ · Juliet only · v0.19
+# inner.path™ · Juliet · v0.20
 
-Private pilot for Juliet.
+Reconnect current.
 
-Updates:
-- Reconnect marked as done
-- S · 01 is current
-- 4-session continuity path added
-- Light Bath in Reconnect/S1
-- Inner Child EN added in S2
-- 5-5 breathing kept as the base regulation practice
-- No Reset 90 audio included yet
+- Reconnect Point open
+- S · 01 to S · 04 visible in the path and locked
+- Light Bath included
+- Inner Child prepared for S · 02
